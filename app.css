@@ -1,0 +1,423 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    //border: 1px solid black
+}
+
+:root {
+    --Grey-900: #48556A;
+    --Grey-500: #6E8098;
+    --Grey-400: #9DAEC2;
+    --Grey-200: #ECF2F8;
+}
+
+
+
+/* Text settings */
+
+.text-preset-1 {
+    font-size: 20px;
+    line-height: 130%;
+    letter-spacing: 0.25px;
+    font-weight: 700;
+}
+
+.text-preset-2-medium {
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.12%;
+    font-weight: 500;
+}
+
+.text-preset-2-bold {
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 0.12%;
+    font-weight: 700;
+}
+
+.text-preset-3 {
+    font-size: 13px;
+    line-height: 140%;
+    letter-spacing: 25%;
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--Grey-200);
+    font-family: "Manrope", serif;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    border-radius: 0.75rem;
+
+
+}
+
+.image-div .image {
+    max-width: 100%;
+    height: 100%;
+    //object-fit: cover;
+    border-top-right-radius: 0.75rem;
+    border-top-left-radius: 0.75rem;
+}
+
+.card-body {
+    padding: 40px 40px 30px 40px;
+
+}
+
+.card-title {
+    color: var(--Grey-900);
+    margin-bottom: 0;
+}
+
+.card-text {
+    color: var(--Grey-500);
+    margin: 24px auto;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.author-image img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+.author {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.name-and-date {}
+
+h3 {
+    color: var(--Grey-900);
+    margin-bottom: 0;
+}
+
+.name-and-date p {
+    color: var(--Grey-400);
+    margin-bottom: 0;
+}
+
+.btn {
+    background-color: var(--Grey-200);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.share-icon {
+    z-index: 5;
+}
+
+
+.social-links {
+
+    background-color: var(--Grey-900);
+    padding: 1.6rem 2.5rem;
+    border-radius: 0.75rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: absolute;
+    bottom: 0;
+    display: none;
+
+}
+
+.social-links span {
+    color: var(--Grey-400);
+    letter-spacing: 0.2rem;
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.social-links .links {
+
+    list-style: none;
+    display: flex;
+    align-self: center;
+    gap: 1rem;
+
+}
+
+.btn:hover {
+    background-color: var(--Grey-400);
+    color: white;
+}
+
+
+
+
+.active {
+    display: flex;
+
+}
+
+.share-active {
+    background-color: var(--Grey-500);
+}
+
+.share-active img {
+    filter: brightness(10);
+}
+
+
+
+@media (max-width: 575px) {
+
+    .card-body {
+        padding-bottom: 1rem;
+
+    }
+}
+
+
+@media (min-width: 575px) {
+
+    .image-div .image {
+        //max-width: 100%;
+        //height: 100%;
+        //object-fit: cover;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.75rem;
+    }
+
+    .social-links {
+        background-color: var(--Grey-900);
+        padding: 20px;
+        max-width: 258px;
+        height: 55px;
+        border-radius: 0.75rem;
+        position: absolute;
+        bottom: 6rem;
+        right: -4.4rem;
+        display: flex;
+        /* Initially hidden, until the button is clicked */
+        display: none;
+
+
+    }
+
+    .social-links.active {
+        display: flex;
+    }
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-top: 15px solid var(--Grey-900);
+
+        position: absolute;
+        bottom: 5.2rem;
+        right: 2.75rem;
+        z-index: 3.5rem;
+        /* Initially hidden, until the button is clicked */
+        display: none;
+
+    }
+
+    .triangle.active {
+        display: flex;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.social-links {
+    background-color: var(--Grey-900);
+    padding: 20px;
+    max-width: 258px;
+    height: 55px;
+    border-radius: 0.75rem;
+
+    position: absolute;
+    bottom: 6rem;
+    right: -2.5rem;
+
+
+    display: flex;
+
+    transform: scale(0);
+    /* Initially scale it down to 0 (hidden) */
+transform-origin: center;
+/* Ensure it scales from the bottom right */
+transition: transform 0.3s ease-in-out;
+/* Add transition to transform */
+//z-index: 4;
+//display: none;
+
+
+
+}
+
+
+/*
+.triangle {
+    width: 0;
+    height: 0;
+
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--Grey-900);
+
+    position: absolute;
+    bottom: 5.2rem;
+    right: 2.5rem;
+    z-index: 4;
+
+    opacity: 0;
+    /* Initially make it invisible */
+visibility: hidden;
+/* Ensure it doesn't take space initially */
+transform: scale(0);
+/* Initially scale it down */
+transform-origin: center;
+/* Scale from the center */
+transition: transform 0.3s ease-in-out,
+opacity 0.3s ease-in-out;
+/* Transition both transform and opacity */
+
+}
+
+
+/*
+.social-links.active {
+    transform: scale(1);
+    /* Scale it to 1 (full size) when active */
+}
+
+
+/*
+.social-links.active .triangle {
+    opacity: 1;
+    /* Make it visible */
+visibility: visible;
+/* Ensure the element is part of the layout */
+transform: scale(1);
+/* Scale it to full size */
+
+}
+
+/*
+
+
+
+
+@media (max-width:768px) {
+
+    .image-div .image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        //border-radius: 0.75rem;
+
+
+
+    }
+}
+
+
+@media (max-width:575px) {
+
+
+    .image-div .image {
+        border-top-right-radius: 0.3rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .social-links {
+        background-color: var(--Grey-900);
+        padding: 20px;
+
+        min-width: 100%;
+        height: 76px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        display: none;
+
+        align-items: center;
+        position: absolute;
+
+        //bottom: 0px;
+
+
+
+    }
+
+    .triangle {
+        display: none;
+    }
+
+    .author {
+        display: none;
+        z-index: -1;
+    }
+
+    .social-links .links {
+        width: 60%;
+
+        //max-width: 400px;
+    }
+
+    //.btn {
+    background-color: var(--Grey-500);
+}
+
+//.btn img {
+filter: brightness(10);
+}
+}
